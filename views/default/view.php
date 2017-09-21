@@ -8,4 +8,14 @@
     /**
      * @var $page \common\modules\pages\models\Pages
      */
-    echo $page->caption;
+    $this->title = $page->title;
+    $this->registerMetaTag([
+        'name'    => 'description',
+        'content' => $page->meta_descr != '' ? $page->meta_descr : $page->caption
+    ]);
+    ?>
+    
+    <h1><?=$page->caption;?></h1>
+    <div class="page-content">
+        <?=$page->text?>
+    </div>
