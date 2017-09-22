@@ -30,6 +30,10 @@
         <div class="col-md-6"><?=$form->field($model, 'slug')->textInput(['maxlength' => true])?></div>
     </div>
     <div class="row">
+        <div class="col-md-6"><?=$form->field($model, 'page_name')->textInput(['maxlength' => true])?></div>
+        <div class="col-md-6"><?=$form->field($model, 'page_alias')->textInput(['maxlength' => true])?></div>
+    </div>
+    <div class="row">
         <div class="col-md-6"><?=$form->field($model, 'title')->textInput(['maxlength' => true])?></div>
         <div class="col-md-6"><?=$form->field($model, 'meta_descr')->textInput(['maxlength' => true])?></div>
     </div>

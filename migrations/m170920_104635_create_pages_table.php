@@ -21,6 +21,8 @@
                 'parent_id'  => $this->integer()->defaultValue(null),
                 'title'      => $this->string(255),
                 'slug'      => $this->string(255),
+                'page_name' => $this->string(255),
+                'page_alias' => $this->string(255),
                 'meta_descr' => $this->string(255),
                 'caption'    => $this->string(255),
                 'short_text' => $this->text(),

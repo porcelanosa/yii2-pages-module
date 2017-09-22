@@ -14,6 +14,8 @@ use yii\db\ActiveRecord;
  * @property integer $parent_id
  * @property string $title
  * @property string $slug
+ * @property string $page_name
+ * @property string $page_alias
  * @property string $meta_descr
  * @property string $caption
  * @property string $short_text
@@ -62,7 +64,8 @@ class Pages extends ActiveRecord
     {
         return [
             [['parent_id', 'updated_at', 'created_at', 'sort', 'active'], 'integer'],
-            [['short_text', 'text'], 'string'],
+            [['short_text', 'text', 'page_name', 'page_alias'], 'string'],
+            [['slug'], 'unique'],
             [['title', 'slug', 'meta_descr', 'caption'], 'string', 'max' => 255],
         ];
     }
@@ -77,6 +80,8 @@ class Pages extends ActiveRecord
             'parent_id' => 'Родительская страница',
             'title' => 'Title',
             'slug' => 'ЧПУ - адрес страницу',
+            'page_name' => 'Имя страницы',
+            'page_alias' => 'Псевдоним страницы',
             'meta_descr' => 'Meta Descr',
             'caption' => 'Заголоовк',
             'short_text' => 'Короткий текст ',

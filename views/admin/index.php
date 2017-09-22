@@ -28,6 +28,7 @@
             
             //'id',
             //'parent_id',
+            'page_name',
             'caption',
             'title',
             'slug',
