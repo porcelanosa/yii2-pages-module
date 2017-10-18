@@ -66,6 +66,7 @@ class Pages extends ActiveRecord
             [['parent_id', 'updated_at', 'created_at', 'sort', 'active'], 'integer'],
             [['short_text', 'text', 'page_name', 'page_alias'], 'string'],
             [['slug'], 'unique'],
+            [['slug', 'name'], 'required'],
             [['title', 'slug', 'meta_descr', 'caption'], 'string', 'max' => 255],
         ];
     }
