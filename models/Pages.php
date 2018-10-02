@@ -94,6 +94,7 @@ class Pages extends ActiveRecord
         ];
     }
 
+    
     /**
      * @inheritdoc
      * @return PagesQuery the active query used by this AR class.
