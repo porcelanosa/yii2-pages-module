@@ -2,13 +2,14 @@
     
     namespace common\modules\pages\controllers;
     
-    use common\modules\pages\models\Pages;
     use backend\controllers\BasebackendController as Controller;
+    use common\modules\pages\models\Pages;
     use yii\filters\AccessControl;
     use yii\filters\VerbFilter;
-    //use yii\web\Controller;
     use yii\web\NotFoundHttpException;
-    
+
+    //use yii\web\Controller;
+
     /**
      * Default controller for the `pages` module
      */
@@ -44,6 +45,7 @@
 			    ],
 		    ];
 	    }
+	    
 	    
         /**
          * Renders the index view for the module

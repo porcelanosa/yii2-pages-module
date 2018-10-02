@@ -2,9 +2,6 @@
 
 namespace common\modules\pages\models;
 
-use Yii;
-use common\modules\pages\models\PagesQuery;
-use yii\behaviors\SluggableBehavior;
 use yii\db\ActiveRecord;
 
 /**
@@ -93,6 +90,7 @@ class Pages extends ActiveRecord
             'active' => 'Показывать',
         ];
     }
+    
     
     /**
      * @inheritdoc
