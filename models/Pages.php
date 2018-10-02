@@ -93,7 +93,6 @@ class Pages extends ActiveRecord
             'active' => 'Показывать',
         ];
     }
-
     
     /**
      * @inheritdoc
