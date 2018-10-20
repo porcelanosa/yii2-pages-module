@@ -74,6 +74,4 @@
                 throw new NotFoundHttpException('Страница не найдена');
             }
         }
-        
-        
     }
