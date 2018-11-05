@@ -1,13 +1,12 @@
 <?php
-    
-    use yii\helpers\Html;
-    use yii\widgets\ActiveForm;
-    
-    use \kartik\switchinput\SwitchInput;
-    use mihaildev\ckeditor\CKEditor;
-    use mihaildev\elfinder\ElFinder;
-    
-    /* @var $this yii\web\View */
+	
+	use kartik\switchinput\SwitchInput;
+	use mihaildev\ckeditor\CKEditor;
+	use mihaildev\elfinder\ElFinder;
+	use yii\helpers\Html;
+	use yii\widgets\ActiveForm;
+	
+	/* @var $this yii\web\View */
     /* @var $model common\modules\pages\models\Pages */
     /* @var $form yii\widgets\ActiveForm */
 ?>
@@ -48,7 +47,10 @@
                     [
                         'preset' => 'standart', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
                         'inline' => false, //по умолчанию false
-                    ]),
+                        'allowedContent' => true
+                    ]
+                 
+                ),
             ])
             ;?></div>
     </div>
