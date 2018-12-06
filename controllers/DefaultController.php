@@ -4,6 +4,7 @@
     
     use backend\controllers\BasebackendController as Controller;
     use common\modules\pages\models\Pages;
+    use Yii;
     use yii\filters\AccessControl;
     use yii\filters\VerbFilter;
     use yii\web\NotFoundHttpException;
@@ -67,6 +68,14 @@
         {
             $page = Pages::find()->where(['slug' => rtrim($slug, '/')])->andWhere('active=1')->one();
             if ($page) {
+	            
+		            $host = Yii::$app->request->hostInfo;
+	            
+	            Yii::$app->view->registerLinkTag( [ 'rel' => 'canonical', 'href' => str_replace('http://','https://',$host).'/'.$page->slug ] );
+	            Yii::$app->view->registerMetaTag([
+		            'name' => 'description',
+		            'content' => $page->meta_descr,
+	            ]);
                 return $this->render('view',
                     ['page' => $page]
                 );
