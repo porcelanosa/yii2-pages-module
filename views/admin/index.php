@@ -1,10 +1,10 @@
 <?php
-	
-	use kartik\grid\GridView;
-	use yii\helpers\Html;
-	use yii\widgets\Pjax;
-	
-	//use yii\grid\GridView;
+    
+    use kartik\grid\GridView;
+    use yii\helpers\Html;
+    use yii\widgets\Pjax;
+    
+    //use yii\grid\GridView;
 	
 	/* @var $this yii\web\View */
     /* @var $searchModel common\modules\pages\models\search\PagesSearch */
